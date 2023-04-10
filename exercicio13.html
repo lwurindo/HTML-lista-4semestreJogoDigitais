@@ -1,0 +1,79 @@
+<html>
+
+<style>
+.border {
+  border: 1px solid black;
+
+  padding: 10px;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: -40px;
+  left: 20px;
+  background-color: white;
+  padding: 5px;
+  z-index: 1;
+}
+</style>
+
+
+
+<h1> Cadastro de Curriculo</h1>
+
+
+<div class="border" style="width: 250px;">
+<h4 class="overlay">Informações pessoais</h4>
+
+<thead>
+    <th> Nome: </th> <input>  </input><br>
+
+    <th> Email: </th><input>  </input><br>
+
+    <th> Data de nascimento: </th><input type="date"><br>
+
+
+    <th> Altura(m): </th>  
+        <select name="altura">
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select><br>
+
+    <th> Site : </th><input>  </input><br>
+    <th> Estado Civil </th>        <select name="altura">
+        <option value="1">Solteiro</option>
+        <option value="2">Casado</option>
+        <option value="2">Viuvo</option>
+    </select><br>
+
+    <label>Sexo:</label>
+    <input type="radio" name="sexo" value="masculino">Masculino
+    <input type="radio" name="sexo" value="feminino">Feminino
+
+</div>
+<br>
+<div class="border" style="width: 250px;">
+    <h4 class="overlay">Endereço</h4>
+    <th> CEP: </th> <input>  </input><br>
+    <th> Endereço: </th> <input>  </input><br>
+</div>
+<br>
+<div class="border" style="width: 250px;">
+    <h4 class="overlay">Contato</h4>
+    <th> Telefone: </th> <input>  </input><br>
+    <th> Celular: </th> <input>  </input><br>
+</div>
+
+<br>
+<div class="border" style="width: 250px;">
+    <h4 class="overlay">Conhecimentos</h4>
+
+    <input type="checkbox"> HTML <input type="checkbox"> CSS <input type="checkbox"> JavaScript
+
+    <h4>Mais conhecimentos: </h4><br><textarea> Digite aqui caso tenha mais conhecimentos...
+    
+
+</thead>
+
+</html>

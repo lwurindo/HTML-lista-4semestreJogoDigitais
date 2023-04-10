@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #conteudo {
+                padding: 30px 0px
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Tópicos HTML</h1>
+        </header>
+        <nav>
+            <a href="index.html"> Index </a> -
+            <a href wm-nav="Exercicio01.html"> Ex01 </a> -
+            <a href wm-nav="Exercicio02.html"> Ex02 </a> -
+            <a href wm-nav="Exercicio03.html"> Ex03 </a> -
+            <a href wm-nav="Exercicio04.html"> Ex04 </a> -
+            <a href wm-nav="Exercicio05.html"> Ex05 </a> -
+            <a href wm-nav="Exercicio06.html"> Ex06 </a> -
+            <a href wm-nav="Exercicio07.html"> Ex07 </a> -
+            <a href wm-nav="Exercicio08.html"> Ex08 </a> -
+            <a href wm-nav="Exercicio09.html"> Ex09 </a> -
+            <a href wm-nav="Exercicio10.html"> Ex10 </a> -
+            <a href wm-nav="Exercicio11.html"> Ex11 </a> -
+            <a href wm-nav="Exercicio12.html"> Ex12 </a> -
+            <a href wm-nav="Exercicio13.html"> Ex13 </a>
+        </nav>
+        <section id="conteudo"></section>
+        <script>
+            document.querySelectorAll("[wm-nav]").forEach(link => {
+                const conteudo=document.getElementById('conteudo')
+                link.onclick = function (e) {
+                    e.preventDefault()
+                    fetch(link.getAttribute('wm-nav'))
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+                }
+            })
+        </script>
+        <footer>
+            Ferramentas Web
+        </footer>
+    </body>
+</html>
